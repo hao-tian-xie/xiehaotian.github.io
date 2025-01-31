@@ -45,9 +45,20 @@
             color: #007bff;
             font-weight: 400;
         }
-        section {
-            text-align: center;
+        .section {
             padding: 50px 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .news, .education, .publications {
+            padding: 20px;
+        }
+        .news h2, .education h2, .publications h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
         }
         footer {
             text-align: center;
@@ -74,12 +85,31 @@
         <a href="contact.html">联系</a>
     </nav>
     
-    <section>
-        <div class="container">
-            <h2>关于我</h2>
-            <p>我是 Haotian Xie，计算机科学教授，专注于机器学习、人工智能和边缘计算的研究。</p>
-        </div>
-    </section>
+    <div class="container">
+        <section class="section">
+            <div class="news">
+                <h2>News</h2>
+                <p>这里是最新的学术动态、研究进展或其他相关信息。</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="education">
+                <h2>Education</h2>
+                <p>博士，计算机科学，北京大学（2015-2020）</p>
+                <p>硕士，人工智能，清华大学（2013-2015）</p>
+                <p>学士，计算机工程，复旦大学（2009-2013）</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="publications">
+                <h2>Selected Publications</h2>
+                <p>1. Haotian Xie et al., "Deep Learning for Edge Computing," IEEE Transactions, 2022.</p>
+                <p>2. Haotian Xie et al., "Graph Neural Networks in UAV Networks," ACM Journal, 2023.</p>
+            </div>
+        </section>
+    </div>
     
     <footer>
         <p>© 2025 Haotian Xie | 个人学术主页</p>
