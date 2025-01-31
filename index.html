@@ -5,76 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haotian Xie - 个人学术主页</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
-            display: flex;
-            height: 100vh;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
         }
-        .sidebar {
-            width: 250px;
-            background: #2c3e50;
-            color: white;
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
             padding: 20px;
-            position: fixed;
-            height: 100%;
         }
-        .sidebar h1 {
-            font-size: 22px;
+        header {
             text-align: center;
+            padding: 50px 0;
         }
-        .sidebar img {
-            display: block;
-            margin: 10px auto;
-            width: 100px;
-            border-radius: 50%;
+        header h1 {
+            font-weight: 700;
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
-        .sidebar nav a {
-            display: block;
-            color: white;
+        header p {
+            font-weight: 300;
+            font-size: 1.2em;
+        }
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        nav a {
+            margin: 0 15px;
             text-decoration: none;
-            padding: 10px;
-            margin: 5px 0;
-            background: #34495e;
+            color: #007bff;
+            font-weight: 400;
+        }
+        section {
             text-align: center;
-            border-radius: 5px;
-        }
-        .sidebar nav a:hover {
-            background: #1abc9c;
-        }
-        .content {
-            margin-left: 270px;
-            padding: 20px;
-            flex-grow: 1;
+            padding: 50px 0;
         }
         footer {
             text-align: center;
-            padding: 10px;
-            background: #f4f4f4;
-            position: fixed;
-            bottom: 0;
-            width: calc(100% - 250px);
+            padding: 20px;
+            background: #e9ecef;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h1>Haotian Xie</h1>
-        <img src="images/avatar.jpg" alt="Haotian Xie">
-        <nav>
-            <a href="index.html">主页</a>
-            <a href="research.html">研究方向</a>
-            <a href="publications.html">论文</a>
-            <a href="cv.html">个人简历</a>
-            <a href="projects.html">研究项目</a>
-            <a href="contact.html">联系</a>
-        </nav>
-    </div>
-    <div class="content">
-        <h2>关于我</h2>
-        <p>我是 Haotian Xie，计算机科学教授，专注于机器学习、人工智能和边缘计算的研究。</p>
-    </div>
+    <header>
+        <div class="container">
+            <h1>Haotian Xie</h1>
+            <p>计算机科学教授 | 机器学习与人工智能研究</p>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="index.html">主页</a>
+        <a href="research.html">研究方向</a>
+        <a href="publications.html">论文</a>
+        <a href="cv.html">个人简历</a>
+        <a href="projects.html">研究项目</a>
+        <a href="contact.html">联系</a>
+    </nav>
+    
+    <section>
+        <div class="container">
+            <h2>关于我</h2>
+            <p>我是 Haotian Xie，计算机科学教授，专注于机器学习、人工智能和边缘计算的研究。</p>
+        </div>
+    </section>
+    
     <footer>
         <p>© 2025 Haotian Xie | 个人学术主页</p>
     </footer>
