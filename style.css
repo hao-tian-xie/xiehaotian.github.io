@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haotian Xie - 个人学术主页</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background: #f4f4f4;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Haotian Xie</h1>
+        <p>计算机科学教授 | 机器学习与人工智能研究</p>
+        <nav>
+            <a href="index.html">主页</a>
+            <a href="research.html">研究方向</a>
+            <a href="publications.html">论文</a>
+            <a href="cv.html">个人简历</a>
+            <a href="projects.html">研究项目</a>
+            <a href="contact.html">联系</a>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>关于我</h2>
+        <p>我是 Haotian Xie，计算机科学教授，专注于机器学习、人工智能和边缘计算的研究。</p>
+    </section>
+    
+    <footer>
+        <p>© 2025 Haotian Xie | 个人学术主页</p>
+    </footer>
+</body>
+</html>
