@@ -7,112 +7,101 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #ffffff;
             color: #333;
         }
         .container {
-            width: 80%;
-            max-width: 1000px;
-            margin: 0 auto;
+            width: 70%;
+            max-width: 900px;
+            margin: 20px auto;
             padding: 20px;
         }
         header {
-            text-align: center;
-            padding: 50px 0;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        header img {
+            width: 120px;
+            border-radius: 10px;
+            margin-right: 20px;
         }
         header h1 {
-            font-weight: 700;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2em;
+            margin: 0;
         }
         header p {
-            font-weight: 300;
-            font-size: 1.2em;
+            margin: 5px 0;
+            color: #666;
         }
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #007bff;
-            font-weight: 400;
+        .highlight {
+            background-color: #ffffcc;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.1em;
         }
         .section {
-            padding: 50px 0;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            text-align: left;
+            margin-top: 20px;
         }
-        .news, .education, .publications {
-            padding: 20px;
-        }
-        .news h2, .education h2, .publications h2 {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
         }
         footer {
             text-align: center;
-            padding: 20px;
-            background: #e9ecef;
-            margin-top: 50px;
+            padding: 10px;
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Haotian Xie</h1>
-            <p>计算机科学教授 | 机器学习与人工智能研究</p>
-        </div>
-    </header>
-    
-    <nav>
-        <a href="index.html">主页</a>
-        <a href="research.html">研究方向</a>
-        <a href="publications.html">论文</a>
-        <a href="cv.html">个人简历</a>
-        <a href="projects.html">研究项目</a>
-        <a href="contact.html">联系</a>
-    </nav>
-    
     <div class="container">
-        <section class="section">
-            <div class="news">
-                <h2>News</h2>
-                <p>这里是最新的学术动态、研究进展或其他相关信息。</p>
+        <header>
+            <img src="profile.jpg" alt="Haotian Xie">
+            <div>
+                <h1>Haotian Xie</h1>
+                <p>Ph.D. Student, Computer Science</p>
+                <p>The University of Hong Kong</p>
+                <p>[Google Scholar] [LinkedIn] [GitHub] [Resume]</p>
             </div>
-        </section>
-
-        <section class="section">
-            <div class="education">
-                <h2>Education</h2>
-                <p>博士，计算机科学，北京大学（2015-2020）</p>
-                <p>硕士，人工智能，清华大学（2013-2015）</p>
-                <p>学士，计算机工程，复旦大学（2009-2013）</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="publications">
-                <h2>Selected Publications</h2>
-                <p>1. Haotian Xie et al., "Deep Learning for Edge Computing," IEEE Transactions, 2022.</p>
-                <p>2. Haotian Xie et al., "Graph Neural Networks in UAV Networks," ACM Journal, 2023.</p>
-            </div>
-        </section>
+        </header>
+        
+        <div class="highlight">
+            I am currently seeking collaborators for my project. Please don't hesitate to reach out if you're interested!
+        </div>
+        
+        <div class="section">
+            <h2>Research Interests</h2>
+            <p>My research focuses on the control and optimization of power systems, including the following topics:</p>
+            <ul>
+                <li>Machine learning for edge computing</li>
+                <li>Graph Neural Networks for UAV Networks</li>
+                <li>Optimization techniques for networked systems</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Recent News</h2>
+            <ul>
+                <li>2024-09-01: Started my Ph.D. program at The University of Hong Kong.</li>
+                <li>2024-06-24: Graduated from Tsinghua University as an Outstanding Master's Graduate (Top 2%).</li>
+                <li>2024-06-28: Awarded "Outstanding Thesis" for my master's thesis at Tsinghua University (Top 5%).</li>
+                <li>2023-10-11: Received the Tsinghua University First Class Scholarship (Top 5%).</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>© 2025 Haotian Xie | 个人学术主页</p>
+        </footer>
     </div>
-    
-    <footer>
-        <p>© 2025 Haotian Xie | 个人学术主页</p>
-    </footer>
 </body>
 </html>
