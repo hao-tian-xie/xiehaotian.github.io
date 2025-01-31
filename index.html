@@ -90,8 +90,15 @@
             margin-top: 5px;
         }
     </style>
+    <script>
+        function updateTimestamp() {
+            const now = new Date();
+            const formattedDate = now.toISOString().replace('T', ' ').split('.')[0] + ' UTC';
+            document.getElementById("last-modified").innerText = `Page generated ${formattedDate}, by jemdoc. (source)`;
+        }
+    </script>
 </head>
-<body>
+<body onload="updateTimestamp()">
     <div class="sidebar">
         <h2>Haotian Xie</h2>
         <a href="#">Home</a>
@@ -135,7 +142,7 @@
         
         <footer>
             <p>© 2025 Haotian Xie | 个人学术主页</p>
-            <p class="footer-note">Page generated 2025-01-16 09:47:10 UTC, by jemdoc. (source)</p>
+            <p id="last-modified" class="footer-note"></p>
         </footer>
     </div>
 </body>
