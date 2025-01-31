@@ -9,32 +9,59 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+        }
+        .sidebar h1 {
+            font-size: 22px;
             text-align: center;
         }
-        header {
-            background: #f4f4f4;
-            padding: 20px;
+        .sidebar img {
+            display: block;
+            margin: 10px auto;
+            width: 100px;
+            border-radius: 50%;
         }
-        nav a {
-            margin: 0 15px;
+        .sidebar nav a {
+            display: block;
+            color: white;
             text-decoration: none;
-            color: #333;
+            padding: 10px;
+            margin: 5px 0;
+            background: #34495e;
+            text-align: center;
+            border-radius: 5px;
         }
-        section {
+        .sidebar nav a:hover {
+            background: #1abc9c;
+        }
+        .content {
+            margin-left: 270px;
             padding: 20px;
+            flex-grow: 1;
         }
         footer {
-            background: #f4f4f4;
+            text-align: center;
             padding: 10px;
-            margin-top: 20px;
+            background: #f4f4f4;
+            position: fixed;
+            bottom: 0;
+            width: calc(100% - 250px);
         }
     </style>
 </head>
 <body>
-    <header>
+    <div class="sidebar">
         <h1>Haotian Xie</h1>
-        <p>计算机科学教授 | 机器学习与人工智能研究</p>
+        <img src="images/avatar.jpg" alt="Haotian Xie">
         <nav>
             <a href="index.html">主页</a>
             <a href="research.html">研究方向</a>
@@ -43,13 +70,11 @@
             <a href="projects.html">研究项目</a>
             <a href="contact.html">联系</a>
         </nav>
-    </header>
-    
-    <section>
+    </div>
+    <div class="content">
         <h2>关于我</h2>
         <p>我是 Haotian Xie，计算机科学教授，专注于机器学习、人工智能和边缘计算的研究。</p>
-    </section>
-    
+    </div>
     <footer>
         <p>© 2025 Haotian Xie | 个人学术主页</p>
     </footer>
