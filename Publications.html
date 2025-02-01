@@ -85,7 +85,7 @@
         .pub-buttons a:hover {
             background-color: #ddd;
         }
-        .bib-popup {
+        .popup {
             position: fixed;
             top: 50%;
             left: 50%;
@@ -98,10 +98,10 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
-        .bib-popup pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            font-size: 0.9em;
+        .popup iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
         }
         .close-btn {
             position: absolute;
@@ -113,10 +113,14 @@
         }
     </style>
     <script>
-        function showBib(id) {
-            document.getElementById(id).style.display = "block";
+        function showPopup(id, src) {
+            var popup = document.getElementById(id);
+            if (src) {
+                popup.querySelector("iframe").src = src;
+            }
+            popup.style.display = "block";
         }
-        function closeBib(id) {
+        function closePopup(id) {
             document.getElementById(id).style.display = "none";
         }
     </script>
@@ -143,15 +147,15 @@
                     <div class="pub-buttons">
                         <a href="https://www.sciencedirect.com/journal/cleaner-logistics-and-supply-chain">CLSCN</a>
                         <a href="https://doi.org/10.1016/j.clscn.2023.100110">HTML</a>
-                        <a href="#" onclick="showBib('bib-popup-1')">BIB</a>
-                        <a href="#" onclick="showPopup('pdf-popup-1')">PDF</a>
+                        <a href="#" onclick="showPopup('bib-popup-1')">BIB</a>
+                        <a href="#" onclick="showPopup('pdf-popup-1', 'paper1.pdf')">PDF</a>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div id="bib-popup-1" class="bib-popup">
-            <span class="close-btn" onclick="closeBib('bib-popup-1')">&times;</span>
+        <div id="bib-popup-1" class="popup">
+            <span class="close-btn" onclick="closePopup('bib-popup-1')">&times;</span>
             <pre>
 @article{LI2023100110,
 title = {Exploring the drivers of green supply chain management in the Chinese electronics industry: Evidence from a GDEMATEL–AISM approach},
@@ -166,10 +170,10 @@ author = {Yi Li and Yongqi Tan and Yang Pu and Yunying Zhu and Haotian Xie}
 }
             </pre>
         </div>
-
+        
         <div id="pdf-popup-1" class="popup">
             <span class="close-btn" onclick="closePopup('pdf-popup-1')">&times;</span>
-            <iframe src="paper1.pdf"></iframe>
+            <iframe src=""></iframe>
         </div>
         
         <footer>
