@@ -43,67 +43,62 @@
             padding: 20px;
             width: calc(100% - 170px);
         }
-        header {
+        .publication {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            margin-bottom: 20px;
             border-bottom: 1px solid #ddd;
             padding-bottom: 10px;
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
         }
-        header img {
-            width: 100px;
-            border-radius: 10px;
+        .publication img {
+            width: 120px;
+            height: auto;
+            border-radius: 5px;
             margin-right: 15px;
         }
-        header h1 {
-            font-size: 1.6em;
+        .publication-details {
+            flex: 1;
+        }
+        .publication h3 {
+            font-size: 1.1em;
             margin: 0;
         }
-        header p {
-            margin: 5px 0;
+        .publication p {
+            font-size: 0.9em;
             color: #555;
+            margin: 5px 0;
         }
-        .highlight {
-            background-color: #fff3cd;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 1em;
+        .pub-buttons {
+            margin-top: 5px;
         }
-        .section {
-            margin-top: 15px;
+        .pub-buttons a {
+            display: inline-block;
+            padding: 4px 8px;
+            margin-right: 5px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            font-size: 0.85em;
+            text-decoration: none;
+            color: #333;
         }
-        .section h2 {
-            border-bottom: 1px solid #4a90e2;
-            padding-bottom: 5px;
+        .pub-buttons a:hover {
+            background-color: #ddd;
         }
         footer {
             text-align: center;
             padding: 10px;
             margin-top: 20px;
             border-top: 1px solid #ddd;
-            font-size: 0.8em;
+            font-size: 0.75em;
         }
         .footer-note {
-            font-size: 0.75em;
+            font-size: 0.7em;
             color: #666;
             margin-top: 5px;
         }
-        .section p, .section ul {
-            font-size: 1em;
-            line-height: 1.5;
-        }
     </style>
-    <script>
-        function updateTimestamp() {
-            const now = new Date();
-            const formattedDate = now.toISOString().replace('T', ' ').split('.')[0] + ' UTC';
-            document.getElementById("last-modified").innerText = `Page generated ${formattedDate}, by jemdoc. (source)`;
-        }
-    </script>
 </head>
-<body onload="updateTimestamp()">
+<body>
     <div class="sidebar">
         <h2>Haotian Xie</h2>
         <a href="index.html">Home</a>
@@ -117,31 +112,25 @@
     <div class="main-content">
         <div class="section">
             <h2>Publications</h2>
-            <p>Haotian Xie is currently pursuing her Ph.D. in Computer Science at The University of Hong Kong. She obtained her Master's degree in Artificial Intelligence from Tsinghua University in 2024 and earned her Bachelor's degree in Computer Engineering from Peking University in 2021. Her research primarily focuses on machine learning and graph neural networks.</p>
+            <div class="publication">
+                <img src="publication-thumbnail.jpg" alt="Paper Thumbnail">
+                <div class="publication-details">
+                    <h3>BiSeNet: Bilateral Segmentation Network for Real-time Semantic Segmentation</h3>
+                    <p><b>Changqian Yu</b>, Jingbo Wang, Chao Peng, Changxin Gao, Gang Yu, and Nong Sang</p>
+                    <p><i>In European Conference on Computer Vision (ECCV), 2018</i></p>
+                    <div class="pub-buttons">
+                        <a href="#">ECCV 2018 TOP-10 INFLUENTIAL PAPERS</a>
+                        <a href="#">ARXIV</a>
+                        <a href="#">BIB</a>
+                        <a href="#">HTML</a>
+                        <a href="#">CODE</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="section">
-            <h2>Education</h2>
-            <ul>
-                <li>2024-Present, Ph.D. in Computer Science, <a href="#">The University of Hong Kong</a>.</li>
-                <li>2021-2024, M.Sc. in Artificial Intelligence, <a href="#">Tsinghua University</a>.</li>
-                <li>2017-2021, B.Sc. in Computer Engineering, <a href="#">Peking University</a>.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Awards</h2>
-            <ul>
-                <li>2023 Outstanding Graduate Award, Tsinghua University</li>
-                <li>2022 National Scholarship (Top 2%)</li>
-                <li>2021 Outstanding Student Researcher Award</li>
-                <li>2020 Best Paper Award in AI Conference</li>
-            </ul>
-        </div>
-
+        
         <footer>
-            <p>© 2025 Haotian Xie | Personal Website</p>
-            <p id="last-modified" class="footer-note"></p>
+            <p>© 2025 Haotian Xie | Personal Website </p>
         </footer>
     </div>
 </body>
