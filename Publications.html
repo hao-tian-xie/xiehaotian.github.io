@@ -98,20 +98,13 @@
         }
         .publication .journal-overlay {
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: 0;
+            left: 0;
             background: rgba(74, 42, 132, 0.9);
             color: white;
             padding: 6px 12px;
             border-radius: 8px;
             font-weight: bold;
-        }
-
-        .corresponding-author::after {
-            content: '\271D'; /* ✝ 符号 */
-            color: red;
-            font-size: 0.8em;
-            margin-left: 3px;
         }
     </style>
 </head>
@@ -129,11 +122,11 @@
         <div class="section">
             <h2>Publications</h2>
             <div class="publication">
-                <span class="journal-overlay">JATM</span>
+                <div class="journal-overlay">JATM</div>
                 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2772390923000197-gr1_lrg.jpg" alt="JATM">
                 <div class="publication-details">
                     <h3>Exploring the drivers of green supply chain management in the Chinese electronics industry: Evidence from a GDEMATEL–AISM approach</h3>
-                    <p><b class="corresponding-author">Changqian Yu</b>, Jingbo Wang, Chao Peng, Changxin Gao, Gang Yu, and Nong Sang</p>
+                    <p><b>Changqian Yu '\271D' </b>, Jingbo Wang, Chao Peng, Changxin Gao, Gang Yu, and Nong Sang</p>
                     <p><i>In European Conference on Computer Vision (ECCV), 2018</i></p>
                     <div class="pub-buttons">
                         <a href="#">ECCV 2018 TOP-10 INFLUENTIAL PAPERS</a>
