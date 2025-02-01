@@ -113,8 +113,12 @@
         }
     </style>
     <script>
-        function showPopup(id) {
-            document.getElementById(id).style.display = "block";
+        function showPopup(id, src) {
+            var popup = document.getElementById(id);
+            if (src) {
+                popup.querySelector("iframe").src = src;
+            }
+            popup.style.display = "block";
         }
         function closePopup(id) {
             document.getElementById(id).style.display = "none";
@@ -144,7 +148,7 @@
                         <a href="#">ECCV 2018 TOP-10 INFLUENTIAL PAPERS</a>
                         <a href="#">ARXIV</a>
                         <a href="#" onclick="showPopup('bib-popup-1')">BIB</a>
-                        <a href="#" onclick="showPopup('pdf-popup-1')">PDF</a>
+                        <a href="#" onclick="showPopup('pdf-popup-1', 'https://example.com/sample.pdf')">PDF</a>
                         <a href="#">CODE</a>
                     </div>
                 </div>
@@ -165,7 +169,7 @@
         
         <div id="pdf-popup-1" class="popup">
             <span class="close-btn" onclick="closePopup('pdf-popup-1')">&times;</span>
-            <iframe src="https://example.com/sample.pdf"></iframe>
+            <iframe src=""></iframe>
         </div>
         
         <footer>
