@@ -186,6 +186,18 @@
             document.getElementById("last-modified").innerText = `Page generated ${formattedDate}, by jemdoc. (source)`;
         }
     </script>
+    <script>
+        function showPopup(id, src) {
+            var popup = document.getElementById(id);
+            if (src) {
+                popup.querySelector("iframe").src = src;
+            }
+            popup.style.display = "block";
+        }
+        function closePopup(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
 </head>
 <body onload="updateTimestamp()">
     <div class="sidebar">
