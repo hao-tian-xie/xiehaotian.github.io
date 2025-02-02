@@ -148,6 +148,13 @@
             document.getElementById(id).style.display = "none";
         }
     </script>
+    <script>
+        function updateTimestamp() {
+            const now = new Date();
+            const formattedDate = now.toISOString().replace('T', ' ').split('.')[0] + ' UTC';
+            document.getElementById("last-modified").innerText = `Page generated ${formattedDate}, by jemdoc. (source)`;
+        }
+    </script>
 </head>
 <body>
     <div class="sidebar">
